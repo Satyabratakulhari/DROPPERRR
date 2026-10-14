@@ -1,0 +1,371 @@
+.c19-overlay {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 30, 23, 0.62);
+  backdrop-filter: blur(3px);
+  overscroll-behavior: contain;
+  animation: c19-fade 0.2s ease-out;
+}
+
+.c19-overlay *,
+.c19-overlay *::before,
+.c19-overlay *::after {
+  box-sizing: border-box;
+}
+
+.c19-sheet {
+  display: flex;
+  width: min(100%, 520px);
+  max-height: 88vh;
+  max-height: 88dvh;
+  flex-direction: column;
+  overflow: hidden;
+  color: #26332b;
+  background: #fff;
+  border: 1px solid #e8ebe5;
+  border-radius: 20px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+  font-family: "DM Sans", Arial, sans-serif;
+  animation: c19-pop 0.22s ease-out;
+}
+
+.c19-mobile-handle {
+  display: none;
+}
+
+.c19-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  border-bottom: 1px solid #e8ebe5;
+}
+
+.c19-eyebrow {
+  color: #c96848;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.c19-header h2 {
+  margin: 9px 0;
+  color: #263d30;
+  font-family: "Manrope", sans-serif;
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.c19-header p {
+  margin: 0;
+  color: #737a73;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.c19-close {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #263d30;
+  background: #f1f4ed;
+  border: 0;
+  border-radius: 50%;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.c19-close:hover {
+  background: #e5ebdf;
+}
+
+.c19-content {
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.c19-group {
+  margin-bottom: 26px;
+}
+
+.c19-group:last-child {
+  margin-bottom: 4px;
+}
+
+.c19-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 13px;
+}
+
+.c19-section-label {
+  color: #344234;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.c19-block {
+  display: block;
+  margin-bottom: 11px;
+}
+
+.c19-label-row > strong {
+  color: #c96848;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.c19-muted {
+  color: #858b82;
+  font-size: 11px;
+}
+
+.c19-price-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.c19-price-inputs > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.c19-price-inputs label {
+  color: #737a73;
+  font-size: 11px;
+}
+
+.c19-price-inputs select,
+.c19-select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 11px 12px;
+  color: #26332b;
+  background: #fff;
+  border: 1px solid #dfe4da;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.c19-price-inputs select:focus,
+.c19-select:focus {
+  border-color: #66806a;
+  box-shadow: 0 0 0 3px rgba(102, 128, 106, 0.14);
+}
+
+.c19-rating-options {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.c19-rating-option {
+  display: flex;
+  min-width: 0;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 6px 3px;
+  color: #596257;
+  background: #fff;
+  border: 1px solid #e1e5dc;
+  border-radius: 9px;
+  font-size: 12px;
+}
+
+.c19-rating-option > span {
+  color: #d99b30;
+}
+
+.c19-rating-option.selected {
+  color: #fff;
+  background: #263d30;
+  border-color: #263d30;
+}
+
+.c19-rating-option.selected > span {
+  color: #ffd47b;
+}
+
+.c19-interest-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.c19-interest {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 14px;
+  color: #52604f;
+  background: #fff;
+  border: 1px solid #dfe4da;
+  border-radius: 24px;
+  font-size: 13px;
+}
+
+.c19-interest:hover {
+  background: #f7f8f5;
+}
+
+.c19-interest.selected {
+  color: #263d30;
+  background: #edf2e9;
+  border-color: #71866e;
+  font-weight: 700;
+}
+
+.c19-footer {
+  display: flex;
+  flex-shrink: 0;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #fff;
+  border-top: 1px solid #e8ebe5;
+}
+
+.c19-reset,
+.c19-apply {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.c19-reset {
+  flex-shrink: 0;
+  color: #263d30;
+  background: #fff;
+  border: 1px solid #dfe4da;
+}
+
+.c19-reset:hover {
+  background: #f5f7f2;
+}
+
+.c19-apply {
+  flex: 1;
+  color: #fff;
+  background: #263d30;
+  border: 1px solid #263d30;
+}
+
+.c19-apply:hover {
+  background: #385641;
+}
+
+/* Phones: bottom sheet */
+@media (max-width: 600px) {
+  .c19-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .c19-sheet {
+    width: 100%;
+    max-width: none;
+    max-height: 92vh;
+    max-height: 92dvh;
+    border: 0;
+    border-radius: 22px 22px 0 0;
+    animation: c19-slide-up 0.25s ease-out;
+  }
+
+  .c19-mobile-handle {
+    display: block;
+    width: 40px;
+    height: 4px;
+    flex-shrink: 0;
+    margin: 10px auto 0;
+    background: #d8ddd5;
+    border-radius: 10px;
+  }
+
+  .c19-header {
+    padding: 16px 20px 18px;
+  }
+
+  .c19-header h2 {
+    margin: 7px 0;
+    font-size: 25px;
+  }
+
+  .c19-header p {
+    max-width: 260px;
+    font-size: 12px;
+  }
+
+  .c19-content {
+    padding: 20px;
+  }
+
+  .c19-footer {
+    padding: 14px 20px;
+    padding-bottom: max(14px, env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 380px) {
+  .c19-rating-options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .c19-price-inputs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .c19-footer {
+    gap: 8px;
+  }
+}
+
+@keyframes c19-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes c19-pop {
+  from { opacity: 0; transform: translateY(14px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes c19-slide-up {
+  from { transform: translateY(40px); opacity: 0.7; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c19-overlay,
+  .c19-sheet {
+    animation: none;
+  }
+}
